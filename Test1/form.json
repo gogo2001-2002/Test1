@@ -1,0 +1,93 @@
+{
+    "elements": [
+        {
+            "type": "List",
+            "name": "VariableList",
+            "caption": "Eingangsvariablen",
+            "rowCount": 10,
+            "add": true,
+            "delete": true,
+            "columns": [
+                {
+                    "caption": "Aktiv",
+                    "name": "Active",
+                    "width": "65px",
+                    "add": true,
+                    "edit": {
+                        "type": "CheckBox"
+                    }
+                },
+                {
+                    "caption": "Variable",
+                    "name": "VariableID",
+                    "width": "300px",
+                    "add": 0,
+                    "edit": {
+                        "type": "SelectVariable"
+                    }
+                },
+                {
+                    "caption": "Invertieren (NICHT)",
+                    "name": "Invert",
+                    "width": "120px",
+                    "add": false,
+                    "edit": {
+                        "type": "CheckBox"
+                    }
+                },
+                {
+                    "caption": "Beschreibung / Notiz",
+                    "name": "Description",
+                    "width": "auto",
+                    "add": "",
+                    "edit": {
+                        "type": "ValidationTextBox"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Select",
+            "name": "Operation",
+            "caption": "Logische Verknüpfung",
+            "options": [
+                { "caption": "UND (AND) - alle aktiven wahr", "value": 0 },
+                { "caption": "ODER (OR) - mindestens eine aktiv wahr", "value": 1 },
+                { "caption": "XOR (Genau eine wahr) - exakt 1 aktiv wahr", "value": 2 },
+                { "caption": "NAND (Nicht-UND) - nicht alle aktiv wahr", "value": 3 },
+                { "caption": "NOR (Nicht-ODER) - keine aktiv wahr", "value": 4 },
+                { "caption": "XOR (Parität) - ungerade Anzahl aktiv wahr", "value": 5 }
+            ]
+        },
+        {
+            "type": "SelectVariable",
+            "name": "TargetVariable",
+            "caption": "Externe Zielvariable (optional)",
+            "validVariableTypes": [0]
+        }
+    ],
+    "actions": [
+        {
+            "type": "Button",
+            "caption": "Jetzt neu berechnen",
+            "onClick": "TEST1_Calculate($id);"
+        }
+    ],
+    "status": [
+        {
+            "code": 102,
+            "icon": "active",
+            "caption": "Test1 ist aktiv und überwacht Änderungen"
+        },
+        {
+            "code": 104,
+            "icon": "inactive",
+            "caption": "Konfiguration unvollständig (bitte mindestens eine aktive Variable hinzufügen)"
+        },
+        {
+            "code": 201,
+            "icon": "error",
+            "caption": "Mindestens eine der ausgewählten Variablen existiert nicht mehr"
+        }
+    ]
+}

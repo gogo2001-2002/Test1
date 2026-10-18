@@ -1,0 +1,14 @@
+{
+    "id": "{F840ACFF-BBBF-48DB-AB60-479F2D0E278A}",
+    "name": "Test1",
+    "type": 3,
+    "vendor": "Custom",
+    "aliases": [
+        "Logische Verknüpfung",
+        "Logic Gate"
+    ],
+    "parentRequirements": [],
+    "childRequirements": [],
+    "implemented": [],
+    "prefix": "TEST1"
+}
